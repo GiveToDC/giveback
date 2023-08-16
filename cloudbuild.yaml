@@ -5,4 +5,5 @@ steps:
   args: ['python', 'tests.py']
 - name: ['gcr.io/cloud-builders/gcloud']
     id: 'deploy'
-  args: ['functions', 'deploy', 'load_cards', '--source' , 'functions/load_cards/main.py', '--runtime' , 'python311' ,'--trigger-topic', 'load_cards', '--set-secrets', 'BEARER_TOKEN=givecard_dev_token:latest', --region, 'us-east1']
+  args: ['functions', 'deploy', 'load_cards', '--source', 'functions/load_cards/main.py', '--runtime', 'python311', '--trigger-topic', 'load_cards', '--set-secrets', 'BEARER_TOKEN=givecard_dev_token:latest', --region, 'us-east1',
+        '--memory', '256M', '--cpu', '.167', '--timeout', '300']
