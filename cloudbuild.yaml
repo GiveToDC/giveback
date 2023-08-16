@@ -1,11 +1,4 @@
 steps:
-- name: 'python'
-  args: ['pip3','install', '-r', 'requirements.txt', '--user']
-- name: 'python'
-  args: ['python', 'tests.py']
-- name: ['gcr.io/cloud-builders/gcloud']
-    id: 'deploy'
-  steps:
 - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
     args:
     - gcloud
