@@ -4,11 +4,6 @@ import json
 from unittest import mock
 
 
-class AmountMessage:
-    def __init__(self, amount):
-        self.data
-
-
 def test_get_card_ids():
     card_ids = main.get_card_ids()
     assert isinstance(card_ids, list)
