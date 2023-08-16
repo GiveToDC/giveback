@@ -5,7 +5,7 @@ steps:
   - functions
   - deploy
   - load_cards
-  - --region=us_central1
+  - --region=us-east1
   - --trigger-topic=load_cards
   - --runtime=python311
   dir: 'functions/load_cards'
