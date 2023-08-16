@@ -6,7 +6,7 @@ import os
 from dotenv import load_dotenv
 
 load_dotenv("../../.env")  # Load environment variables if being tested locally
-bearer_token = os.getenv("BEARER_TOKEN")
+bearer_token = f'Bearer {os.getenv("BEARER_TOKEN")}'
 
 
 @functions_framework.cloud_event
