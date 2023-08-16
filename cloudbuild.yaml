@@ -1,11 +1,11 @@
 steps:
 - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
-    args:
-    - gcloud
-    - functions
-    - deploy
-    - load_cards
-    - --region=us_east1
-    - --source=./functions/load_cards/main.py
-    - --trigger-topic=load_cards
-    - --runtime=python311
+  args:
+  - gcloud
+  - functions
+  - deploy
+  - load_cards
+  - --region=us_east1
+  - --trigger-topic=load_cards
+  - --runtime=python311
+  dir: 'functions/load_cards'
