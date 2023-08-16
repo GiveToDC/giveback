@@ -3,8 +3,10 @@ import functions_framework
 import json
 import requests
 import os
+from dotenv import load_dotenv
 
-bearer_token = os.environ.get("bearer_token")
+load_dotenv("../../.env")  # Load environment variables if being tested locally
+bearer_token = os.getenv("BEARER_TOKEN")
 
 
 @functions_framework.cloud_event
