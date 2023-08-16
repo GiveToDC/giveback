@@ -8,4 +8,6 @@ steps:
   - --region=us-east1
   - --trigger-topic=load_cards
   - --runtime=python311
+  - --gen2
+  - --set-secrets=BEARER_TOKEN=givecard_dev_token
   dir: 'functions/load_cards'
