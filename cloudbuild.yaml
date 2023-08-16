@@ -9,5 +9,5 @@ steps:
   - --trigger-topic=load_cards
   - --runtime=python311
   - --gen2
-  - --set-secrets=BEARER_TOKEN=givecard_dev_token
+  - --set-secrets=BEARER_TOKEN=givecard_dev_token:latest
   dir: 'functions/load_cards'
