@@ -1,4 +1,4 @@
-import os, pathlib
+import os, pathlib, sys
 import pytest
 
 root = pathlib.Path.cwd()
@@ -8,4 +8,6 @@ for path in function_paths:
     if ".pytest_cache" in path:
         continue
     os.chdir(path)
-    pytest.main(["tests.py"])
+    code = pytest.main(["tests.py"])
+    if code.value != 0:
+        sys.exit(code.value)
