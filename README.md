@@ -7,18 +7,18 @@ There are individual function READMEs in function folders.
  We prepend `'Bearer '` in code, so these variables should just be the token.
 ### Local
 For running tests locally create a `.env` file in the root of the project with the dev token.
-```json
+```yaml
 bearer_token="<TOKEN>"
 ```
 
 ### GitHub actions
 To run the tests as part of a GitHub workflow the dev token is assigned as a repository secret called `GIVECARD_DEV_BEARER_TOKEN`.
 ```yaml
-- name: Test with pytest
-	env:
-	BEARER_TOKEN: ${{ secrets.GIVECARD_DEV_BEARER_TOKEN }}
-	run: |
-	python tests.py
+    - name: Test with pytest
+      env:
+        BEARER_TOKEN: ${{ secrets.GIVECARD_DEV_BEARER_TOKEN }}
+      run: |
+        python tests.py
 ```
 
 ### Google Cloud
