@@ -1,13 +1,3 @@
-steps:
-- name: python
-  entrypoint: pip
-  args:
-  - install
-  - -r
-  - requirements.txt
-  - --user
-  dir: 'functions/load_cards'
-
 - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
   args:
   - gcloud
